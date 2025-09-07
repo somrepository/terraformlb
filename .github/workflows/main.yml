@@ -2,12 +2,11 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-# permissions:
-#  contents: read
+
 jobs:
   plan:
     name: fmt/validate/plan
-    runs-on: hulk
+    runs-on: self-hosted   # kyunki tum "runnervinod" self-hosted runner use kar rahe ho
     defaults:
       run:
         working-directory: ./todoapp_infra
@@ -18,15 +17,14 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y unzip
 
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.8.5
-          
-      - name: Setup Azure CLI
-        uses: azure/setup-azure@v3
-        with:
-          version: latest
 
       - name: Azure Login
         uses: azure/login@v2
