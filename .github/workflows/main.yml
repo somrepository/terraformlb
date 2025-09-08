@@ -1,6 +1,9 @@
 name: "surya"
 
 on: workflow_dispatch
+    permission:
+    id-token: write
+    contents: read 
 
 jobs: 
   terraform-job:  
@@ -9,18 +12,18 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v5.0.0
  
-        - name: Install Terraform
-          uses: little-core-labs/install-terraform@v2.0.0
-          with: 
-              version: 1.8.5
+        # - name: Install Terraform
+        #   uses: little-core-labs/install-terraform@v2.0.0
+        #   with: 
+        #       version: 1.8.5
               
         - name: Azure Login
           uses: Azure/login@v2.3.0
           with:
-            client-id: ${{ secrets.AZURE_CLIENT_ID }}
-            tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-            subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-            client-secret: ${{ secrets.AZURE_CLIENT_SECRET }} 
+            client-id: e6accec5-c4b1-4fd7-be5c-20d2116c7e30
+            tenant-id: e4cbbb94-337a-466a-a645-8f7815ae9ae3
+            subscription-id: 541aa6e9-5e65-4ca7-bd4b-befb88d6f6ae
+           
                   
             
         
