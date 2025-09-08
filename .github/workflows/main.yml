@@ -1,6 +1,6 @@
 name: "surya"
 
-on: push
+on: workflow_dispatch
     permission:
     id-token: write
     contents: read 
