@@ -22,7 +22,7 @@ jobs:
           with:
             client-id: e6accec5-c4b1-4fd7-be5c-20d2116c7e30
             tenant-id: e4cbbb94-337a-466a-a645-8f7815ae9ae3
-            subscription-id: 541aa6e9-5e65-4ca7-bd4b-befb88d6f6ae
+            subscription-id: 541aa6e9-5e65-4ca7-bd4b-befb88d6f6ae 
            
                   
             
