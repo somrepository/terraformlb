@@ -24,4 +24,4 @@ jobs:
     
             - name: Terraform Plan
               run: terraform plan 
-              working-directory: terraformlb/todoapp_infra/
+              working-directory: ./todoapp_infra
