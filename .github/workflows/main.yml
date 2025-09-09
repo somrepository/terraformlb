@@ -19,7 +19,7 @@ jobs:
               working-directory: ./todoapp_infra
         
             - name: Terraform Fmt Check
-              run: terraform-fmt
+              run: terraform fmt
               working-directory: ./todoapp_infra
     
             - name: Terraform Validate
