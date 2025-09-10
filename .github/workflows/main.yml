@@ -34,3 +34,8 @@ jobs:
             - name: Terraform Plan
               run: terraform plan 
               working-directory: ./todoapp_infra
+
+            - name: Terraform Plan
+              run: terraform apply 
+              working-directory: ./todoapp_infra
+              
