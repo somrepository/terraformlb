@@ -35,7 +35,7 @@ jobs:
               run: terraform plan 
               working-directory: ./todoapp_infra
 
-            - name: Terraform Plan
-              run: terraform apply 
+            - name: Terraform Apply
+              run: terraform apply -auto-approve
               working-directory: ./todoapp_infra
               
